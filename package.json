@@ -1,0 +1,16 @@
+{
+  "name": "proyectalo-links",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:proyectalo": "npx tailwindcss -i ./input.css -o ./PROYECTALO-BOTONERA/css/tailwind.css --minify",
+    "watch:proyectalo": "npx tailwindcss -i ./input.css -o ./PROYECTALO-BOTONERA/css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
