@@ -23,5 +23,11 @@ const profileData = {
         },
 
     ],
-    socials: []
+    socials: [
+        {
+            url: "https://www.instagram.com/proyectalo.ag",
+            icon: "mdi:instagram",
+            colorClass: "icon-instagram"
+        }
+    ]
 };
