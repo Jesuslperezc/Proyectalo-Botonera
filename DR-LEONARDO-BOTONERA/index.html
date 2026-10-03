@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/avatar.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- SEO Básico -->
+    <title>Dr. Leonardo Pérez Bustamante | Obstetra y Ginecólogo</title>
+    <meta name="description" content="Agenda tu cita con el Dr. Leonardo Pérez Bustamante. Especialista en Obstetricia, Ginecología y Ecografías 4D.">
+    <meta name="theme-color" content="#020c1b" />
+
+    <!-- Recursos -->
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Botón Toggle Modo Claro/Oscuro -->
+    <button id="theme-toggle" class="theme-toggle-btn">
+        <iconify-icon id="theme-icon" icon="mdi:weather-night" class="theme-toggle-icon"></iconify-icon>
+    </button>
+
+    <!-- Imagen del Doctor a la derecha (Fondo) -->
+    <div class="doctor-bg"></div>
+    <div class="noise-overlay"></div>
+    <div class="cinematic-vignette"></div>
+
+    <!-- Doble Video Blindado (Sin controles nativos) -->
+    <video id="smoke-video-1" class="smoke-video" autoplay muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+        <source src="assets/humo.mp4" type="video/mp4">
+    </video>
+    <video id="smoke-video-2" class="smoke-video" muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" style="opacity: 0;">
+        <source src="assets/humo.mp4" type="video/mp4">
+    </video>
+    <!-- Panel Flotante Izquierdo -->
+    <main class="floating-panel">
+        <header id="profile-header" class="w-full flex flex-col items-center mb-8"></header>
+        <nav id="links-container" class="w-full flex flex-col gap-3"></nav>
+        <footer id="socials-container" class="w-full mt-8 pt-4 border-t border-white/10 flex justify-center gap-6"></footer>
+            
+        <div class="footer-bottom text-center text-white/40 text-[10px] z-10 relative w-full mt-4">
+            © <span id="current-year"></span> Dr. Leonardo Pérez Bustamante
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <!-- Cargar tsparticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

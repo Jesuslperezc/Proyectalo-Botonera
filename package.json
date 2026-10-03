@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:proyectalo": "npx tailwindcss -i ./input.css -o ./PROYECTALO-BOTONERA/css/tailwind.css --minify",
-    "watch:proyectalo": "npx tailwindcss -i ./input.css -o ./PROYECTALO-BOTONERA/css/tailwind.css --watch"
+    "build:doctor": "npx tailwindcss -i ./input.css -o ./DR-LEONARDO-BOTONERA/css/tailwind.css --minify"
   },
   "keywords": [],
   "author": "",

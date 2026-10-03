@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./PROYECTALO-BOTONERA/index.html",
-    "./PROYECTALO-BOTONERA/js/app.js",
-    "./PROYECTALO-BOTONERA/js/data.js"
+    "./PROYECTALO-BOTONERA/**/*.{html,js}",
+    "./DR-LEONARDO-BOTONERA/**/*.{html,js}" // Cambia este nombre si tu nueva carpeta se llama diferente
   ],
   theme: {
     extend: {},
