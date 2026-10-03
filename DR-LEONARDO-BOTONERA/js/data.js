@@ -13,21 +13,21 @@ const profileData = {
             url: "https://wa.me/584127636377?text=Hola%20Dr.%20Pérez,%20quisiera%20agendar%20una%20cita.",
             icon: "mdi:calendar-check",
             colorClass: "icon-whatsapp", 
-            featured: true
+            featured: false
         },
         {
             title: "Cómo Llegar (Google Maps)",
             url: "https://maps.app.goo.gl/TU_LINK_AQUI", // <-- Pon el link de Maps aquí
             icon: "mdi:map-marker",
             colorClass: "icon-location", 
-            featured: true
+            featured: false
         },
         {
             title: "Especialidades",
             action: "open-modal",
             icon: "mdi:medical-bag",
             colorClass: "icon-service", 
-            featured: true 
+            featured: false
         }
     ],
     socials: []
