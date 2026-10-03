@@ -1,21 +1,23 @@
 {
-  "name": "Proyectalo | Agencia de Marketing",
-  "short_name": "Proyectalo",
-  "description": "No solo muestres tu marca, proyéctala.",
+  "name": "Dr. Leonardo Pérez Bustamante | Ginecólogo y Obstetra",
+  "short_name": "Dr. Leonardo Pérez",
+  "description": "Especialista en Ginecología, Obstetricia, Control Prenatal y Ginecología Regenerativa y Estética. ",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#120e41",
-  "theme_color": "#120e41",
+  "background_color": "#0A2342",
+  "theme_color": "#0A2342",
   "icons": [
     {
-      "src": "assets/proyectalo.png",
+      "src": "logo.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "assets/proyectalo.png",
+      "src": "logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

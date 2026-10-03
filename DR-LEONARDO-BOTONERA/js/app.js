@@ -82,44 +82,63 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         socialsContainer.style.display = 'none';
     }
-
     // LÓGICA DEL MODAL MÉDICO
     const servicesModalHTML = `
         <div id="services-modal" class="modal-backdrop">
             <div class="modal-surface">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="modal-title">Especialidades</h2>
+                <div class="modal-header">
+                    <h2 class="modal-title">Servicios</h2>
                     <button id="close-modal-btn" class="modal-close-btn">
                         <iconify-icon icon="mdi:close" class="modal-close-icon"></iconify-icon>
                     </button>
                 </div>
-                <div class="space-y-4">
-                    <div class="service-item flex gap-4">
-                        <div class="icon-box mt-1"><iconify-icon icon="mdi:baby-carriage" class="w-6 h-6 modal-icon-cyan"></iconify-icon></div>
-                        <div>
-                            <h3 class="modal-subtitle">Control Prenatal</h3>
-                            <p class="modal-text">Seguimiento integral durante tu embarazo para garantizar tu bienestar y el de tu bebé.</p>
-                        </div>
+                
+                <div class="space-y-8">
+                    <!-- Ginecología -->
+                    <div>
+                        <h3 class="modal-category"><iconify-icon icon="mdi:human-female" class="modal-icon-cyan"></iconify-icon> Ginecología</h3>
+                        <ul class="modal-list">
+                            <li>Consulta ginecológica</li>
+                            <li>Colposcopia</li>
+                            <li>Papanicolaou / Citología cérvico vaginal</li>
+                            <li>Ecografía ginecológica (Abdominal y Transvaginal)</li>
+                            <li>Despistaje de cáncer de cuello uterino</li>
+                            <li>Toma de biopsia (Cuello uterino y endometrio)</li>
+                            <li>Planificación familiar</li>
+                            <li>Colocación de implante subdérmico y DIU</li>
+                            <li>Enfermedades de niñas y adolescentes</li>
+                            <li>Cauterización de cuello uterino y de lesiones</li>
+                            <li>Cirugías ginecológicas</li>
+                        </ul>
                     </div>
-                    <div class="service-item flex gap-4">
-                        <div class="icon-box mt-1"><iconify-icon icon="mdi:ultrasound" class="w-6 h-6 modal-icon-cyan"></iconify-icon></div>
-                        <div>
-                            <h3 class="modal-subtitle">Ecografías 4D</h3>
-                            <p class="modal-text">Tecnología de última generación para ver a tu bebé en alta definición antes de nacer.</p>
-                        </div>
+
+                    <!-- Obstetricia -->
+                    <div>
+                        <h3 class="modal-category"><iconify-icon icon="mdi:baby-carriage" class="modal-icon-cyan"></iconify-icon> Obstetricia</h3>
+                        <ul class="modal-list">
+                            <li>Control prenatal</li>
+                            <li>Ecografía obstétrica (Abdominal y Transvaginal)</li>
+                            <li>Atención de embarazo de alto riesgo</li>
+                            <li>Cirugías obstétricas</li>
+                        </ul>
                     </div>
-                    <div class="service-item flex gap-4">
-                        <div class="icon-box mt-1"><iconify-icon icon="mdi:heart-pulse" class="w-6 h-6 modal-icon-cyan"></iconify-icon></div>
-                        <div>
-                            <h3 class="modal-subtitle">Ginecología General</h3>
-                            <p class="modal-text">Consultas, prevención y tratamiento de enfermedades de la mujer.</p>
-                        </div>
+
+                    <!-- Ginecología Regenerativa, Funcional y Estética -->
+                    <div>
+                        <h3 class="modal-category"><iconify-icon icon="mdi:sparkles" class="modal-icon-cyan"></iconify-icon> Ginecología regenerativa, funcional y estética</h3>
+                        <ul class="modal-list">
+                            <li>Labioplastia</li>
+                            <li>Rejuvenecimiento vaginal y vulvar</li>
+                            <li>Blanqueamiento vulvar</li>
+                            <li>Tensado vaginal</li>
+                            <li>Terapia regenerativa con plasma rico en plaquetas (PRP)</li>
+                            <li>Láser CO2</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     `;
-
     document.body.insertAdjacentHTML('beforeend', servicesModalHTML);
 
     const modal = document.getElementById('services-modal');
