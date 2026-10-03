@@ -49,35 +49,33 @@ html.dark .doctor-bg {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 html.dark .noise-overlay { opacity: 0.04; }
-/* === VIDEO DE HUMO CINEMATOGRÁFICO === */
-.smoke-video {
-    position: absolute; 
-    top: 0; left: 0;
-    width: 100%;
-    height: 35vh; 
-    object-fit: cover;
-    z-index: 2; 
-    mix-blend-mode: screen; 
-    opacity: 0.09; 
-    pointer-events: none; /* <-- ESTO ES VITAL: El mouse no lo detecta */
-    -webkit-user-select: none; /* Evita seleccionarlo */
-    user-select: none;
-    transition: opacity 1.5s ease-in-out;
+/* === ORBES DE LUZ SUTILES (Efecto CSS) === */
+.light-orb {
+    position: fixed; border-radius: 50%; pointer-events: none; z-index: 2;
+    filter: blur(80px); opacity: 0.15;
 }
-/* === MODO ESCRITORIO/TABLET === */
-@media (min-width: 768px) {
-    .smoke-video {
-        position: fixed;
-        top: 0;
-        left: 0; /* Pegado al borde izquierdo */
-        width: 100%; /* ¡Ancho completo de la pantalla! */
-        height: 100%;
-        opacity: 0.06; 
-        /* Quitamos el right: 0 y left: auto para que ocupe todo */
-    }
+.orb-1 {
+    width: 400px; height: 400px; background: #bae6fd; /* Celeste pastel */
+    top: -100px; left: -100px; animation: floatOrb1 25s ease-in-out infinite;
+}
+.orb-2 {
+    width: 300px; height: 300px; background: #e0f2fe; /* Blanco azulado */
+    bottom: -50px; right: 0%; animation: floatOrb2 30s ease-in-out infinite;
+}
+/* En modo oscuro, se vuelven un susurro de luz */
+html.dark .orb-1 { background: #38bdf8; opacity: 0.08; }
+html.dark .orb-2 { background: #7dd3fc; opacity: 0.06; }
+
+@keyframes floatOrb1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(100px, 50px); }
+}
+@keyframes floatOrb2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-80px, -40px); }
 }
 /* ==========================================================
-   3. PANEL FLOTANTE IZQUIERDO (Cristal con Fusión Difuminada)
+   3. PANEL FLOTANTE IZQUIERDO (Cristal Suave y Sedoso)
    ========================================================== */
 .floating-panel {
     position: relative;
@@ -85,30 +83,29 @@ html.dark .noise-overlay { opacity: 0.04; }
     width: 100%;
     max-width: 100%;
     min-height: 65vh; 
-    padding: 48px 24px 32px; /* Más padding arriba para que el texto no choque con la fusión */
+    padding: 48px 24px 32px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     
-    /* Cristal con Transparencia Degradante */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 100%);
-    backdrop-filter: blur(20px) saturate(120%); /* Blur un poco más fuerte para la fusión */
-    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    /* Cristal Súper Translúcido y de Transición Larga */
+    /* Empieza casi invisible (0.05) y muy lentamente sube hasta 0.7 (no es sólido 100%) */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.3) 35%, rgba(255, 255, 255, 0.7) 100%);
+    backdrop-filter: blur(16px) saturate(110%); 
+    -webkit-backdrop-filter: blur(16px) saturate(110%);
     
-    /* LA MAGIA DE LA FUSIÓN: Difumina los píxeles superiores */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
-    
-    margin-top: -60px; /* Se sube más para meterse en la foto */
-    border-radius: 0; /* Quitamos los bordes redondeados para que la máscara funcione perfectamente */
+    /* Sin máscara, transición natural */
+    border-radius: 30px 30px 0 0; 
+    margin-top: -40px; /* Se sube suavemente para fusionar */
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
-    border-top: none; /* Quitamos el borde superior, ya no se necesita */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 html.dark .floating-panel {
-    background: linear-gradient(180deg, rgba(2, 12, 27, 0.1) 0%, rgba(2, 12, 27, 0.7) 30%, rgba(2, 12, 27, 0.95) 100%);
+    /* Mismo degradado largo y suave en oscuro */
+    background: linear-gradient(180deg, rgba(2, 12, 27, 0.05) 0%, rgba(2, 12, 27, 0.4) 35%, rgba(2, 12, 27, 0.8) 100%);
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 /* === MODO ESCRITORIO/TABLET (Diseño Asimétrico Dividido) === */
 @media (min-width: 768px) {
     body {
