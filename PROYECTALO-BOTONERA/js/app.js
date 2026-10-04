@@ -81,10 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
         socialsContainer.style.display = 'none';
     }
     // ================= LÓGICA DEL MODAL =================
+    // ================= LÓGICA DEL MODAL =================
     const servicesModalHTML = `
         <div id="services-modal" class="modal-backdrop">
             <div class="modal-surface">
-                <div class="flex justify-between items-center mb-6">
+                <!-- CABECERA FIJA -->
+                <div class="modal-header">
                     <h2 class="modal-title">Nuestros Servicios</h2>
                     <button id="close-modal-btn" class="modal-close-btn">
                         <iconify-icon icon="mdi:close" class="modal-close-icon"></iconify-icon>

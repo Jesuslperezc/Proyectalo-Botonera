@@ -286,6 +286,24 @@ html.dark .modal-surface {
 .modal-surface::-webkit-scrollbar { width: 6px; }
 .modal-surface::-webkit-scrollbar-track { background: transparent; }
 .modal-surface::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.2); border-radius: 10px; }
+    /* Cabecera fija del Modal (Inmune al scroll) */
+    .modal-header { 
+        position: sticky; 
+        top: -2rem; 
+        margin: -2rem -2rem 1.5rem -2rem; /* Expande la cabecera a los bordes del modal */
+        padding: 1.5rem 2rem; 
+        background: #ffffff; 
+        z-index: 10; 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+        border-radius: 1rem 1rem 0 0; /* Respeta los bordes redondeados de arriba */
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    } 
+    html.dark .modal-header { 
+        background: #0a0a1a; /* Fondo oscuro de la agencia en modo dark */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
 html.dark .modal-surface::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); }
 
 /* Textos del Modal */
