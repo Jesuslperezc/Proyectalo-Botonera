@@ -232,15 +232,18 @@ html.dark .icon-instagram { color: #C13584; } /* Rosa oscuro en modo oscuro */
 }
 html.dark .link-arrow { color: rgba(18,14,65,0.6); }
 /* ==========================================================
-   6. BOTÓN DE TEMA (Claro/Oscuro)
+   6. BOTÓN DE TEMA (CLARO/OSCURO)
    ========================================================== */
-.theme-toggle-btn {
-    position: fixed; top: 24px; right: 24px; z-index: 50; padding: 10px;
-    border-radius: 9999px; cursor: pointer; border: none;
-    background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
-    display: flex; align-items: center; justify-content: center;
+.theme-toggle-btn { 
+    position: fixed; top: 24px; right: 24px; z-index: 50; 
+    width: 44px; height: 44px; /* Tamaño fijo de círculo */
+    padding: 0; /* Quitamos el padding que desajustaba */
+    border-radius: 9999px; cursor: pointer; border: none; 
+    background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); 
+    border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, background 0.3s ease; 
+    display: flex; align-items: center; justify-content: center; 
+    line-height: 0; /* Elimina el espacio fantasma vertical de los íconos */
 }
 .theme-toggle-btn:hover { transform: scale(1.1); }
 
@@ -250,9 +253,12 @@ html.dark .theme-toggle-btn {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-.theme-toggle-icon { width: 22px; height: 22px; color: #102a43; display: block; }
+.theme-toggle-icon { 
+    width: 24px; height: 24px; 
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #102a43; 
+}
 html.dark .theme-toggle-icon { color: #ffffff; }
-
 /* ==========================================================
    7. MODAL PREMIUM (Textos Blindados)
    ========================================================== */
