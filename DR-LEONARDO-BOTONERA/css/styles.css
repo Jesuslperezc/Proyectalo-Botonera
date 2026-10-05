@@ -190,10 +190,25 @@ html.dark .avatar-ring-wrapper::before {
 
 .profile-avatar { position: relative; z-index: 1; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #eef2f6; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
 html.dark .profile-avatar { border: 2px solid var(--logo-azul); box-shadow: 0 0 15px rgba(0, 174, 239, 0.3); }
+.brand-name { 
+    font-size: 1.25rem; /* Tamaño más pequeño para que quepa en móvil */
+    font-weight: 900; 
+    line-height: 1.1; 
+    color: #102a43; 
+    text-shadow: 0 2px 4px rgba(255,255,255,0.5);
+    white-space: nowrap; /* Evita que el nombre se parta en dos líneas */
+}
+html.dark .brand-name { 
+    color: #ffffff; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
 
-.brand-name { font-size: 1.5rem; font-weight: 900; line-height: 1.1; color: #102a43; text-shadow: 0 2px 4px rgba(255,255,255,0.5); }
-html.dark .brand-name { color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-
+/* En PC o Tablet, lo volvemos más grande */
+@media (min-width: 768px) {
+    .brand-name {
+        font-size: 1.75rem;
+    }
+}
 .role-text { font-size: 0.875rem; color: var(--logo-celeste); font-weight: 600; margin-top: 4px; }
 html.dark .role-text { color: var(--logo-celeste); }
 
