@@ -1,6 +1,6 @@
 const profileData = {
     profile: {
-        name: "Dr. Leonardo Pérez",
+        name: "Dr. Leonardo Pérez Bustamante",
         role: "Obstetra - Ginecólogo",
         bio: "Medicina especializada en la salud, funcionalidad y regeneración íntima de la mujer. Más de 25 años cuidando de ti y de tu bebé.",
         avatar: "./assets/logo.png", 
@@ -10,7 +10,7 @@ const profileData = {
     links: [
         {
             title: "Agendar Cita",
-            url: "https://wa.me/584149682471?text=Hola%20Dr.%20Pérez,%20quisiera%20agendar%20una%20cita.",
+            url: "https://wa.me/584149682471?text=Hola%20Dr.%20Leonardo,%20quisiera%20agendar%20una%20cita.",
             icon: "mdi:calendar-check",
             colorClass: "icon-whatsapp", 
             featured: false
